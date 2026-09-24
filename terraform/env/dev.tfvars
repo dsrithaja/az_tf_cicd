@@ -1,3 +1,6 @@
 environment  = "dev"
 location     = "East US"
 project_name = "aztf"
+synapse_workspace_name  = "aztf-dev-synapse"
+sql_administrator_login = "synapseadmin01"
+synapse_location = "Central India"
