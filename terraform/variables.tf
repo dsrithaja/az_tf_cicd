@@ -31,3 +31,7 @@ variable "synapse_location" {
   description = "Azure region for Synapse and its primary Data Lake storage"
   type        = string
 }
+variable "databricks_workspace_name" {
+  description = "Name of the Databricks workspace"
+  type        = string
+}

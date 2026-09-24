@@ -49,3 +49,11 @@ resource "azurerm_role_assignment" "synapse_storage_blob_contributor" {
   role_definition_id = "/subscriptions/${data.azurerm_client_config.current.subscription_id}/providers/Microsoft.Authorization/roleDefinitions/ba92f5b4-2d11-453d-a403-e96b0029c9fe"
   principal_id       = module.synapse.synapse_principal_id
 }
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = var.databricks_workspace_name
+  resource_group_name       = azurerm_resource_group.rg.name
+  location                  = var.location
+  sku                       = "premium"
+}
